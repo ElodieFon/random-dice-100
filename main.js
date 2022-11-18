@@ -1,9 +1,15 @@
 // pour ce jeux il nous faut : 
 // un plateau
+let gameBoard = document.getElementById("gameboard");
 // deux joueurs 
+let playeur1;
+let playeur2 ;
 // un dés 
+let dice = [];
 // un compteur de point
+let counterPtsPlayeur ; 
 // un compteur de tour
+let counterRound ;
 
 // ************************************* PSEUDO CODE *********************************//
 

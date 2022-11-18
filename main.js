@@ -15,6 +15,7 @@
 // Le compteur de point ne peu pas dépasser 100 ou etre inferieur à 0
 
 // le joueur clique sur un bouton pour lancer le dés
+// le dés renvois un nombre de point aléatoir compris entre 1 et 6
 
 // chaque tour du joueur est compté :
 // tant que le joueur ne tombe pas sur 1 

@@ -1,33 +1,44 @@
 // pour ce jeux il nous faut : 
 // un plateau
-let gameBoard = document.getElementById("gameboard");
+let gameBoard = document.getElementById('gameboard');
 // deux joueurs 
-let playeur1;
-let playeur2 ;
+let playeur1 = document.getElementById('playeur1');
+let playeur2 = document.getElementById('playeur2') ;
 // un dés 
-let dice = [];
+let dice = document.getElementById('dice') ;
+
 // un compteur de point
-let counterPtsPlayeur ; 
+let counterPtsPlayeur = 0; 
 // un compteur de tour
-let counterRound ;
-
-// ************************************* PSEUDO CODE *********************************//
-
+let counterRound = 0 ;
+let resultat = 0 ;
 // Pour commencer on lance une nouvelle partie 
+function gameStart(){
 
+}
 // Un dés comporte 6 faces allant de 1 à 6
-
+let diceNumbers = [1,2,3,4,5,6];
 // Chaque joueurs à un compteur de points 
 // Le compteur de point ne peu pas dépasser 100 ou etre inferieur à 0
 
 // le joueur clique sur un bouton pour lancer le dés
-// le dés renvois un nombre de point aléatoir compris entre 1 et 6
+document.getElementById('rollDice').addEventListener("click",function(){
+    // le dés renvois un nombre de point aléatoir compris entre 1 et 6
+    resultat = Math.floor((Math.random()*6)+1);
+    if(resultat != 1){
+        // tant que le joueur ne tombe pas sur 1 
+        // sont nombre de tour augment 
+        counterRound ++ ;
+    }
+    else{
+        // sinon son nombre de tour repasse à 0 
+        counterRound = 0;
+    }
+  
+    console.log("résultat du dé "+ resultat);
+    console.log("tour " + counterRound);
+})
 
-// chaque tour du joueur est compté :
-// tant que le joueur ne tombe pas sur 1 
-// sont nombre de tour augment (1 click = 1 tour) 
-// sinon sont nombre de tour passe a 0 
-// fin tant que
 
 // tant que :
 // si le joueur dont c'est le tour ne tombe pas sur 1 ou n'envoi pas c'est points au compteur :

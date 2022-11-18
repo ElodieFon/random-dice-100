@@ -3,9 +3,7 @@
 // deux joueurs 
 // un dés 
 // un compteur de point
-// un compte tour
-// une condition de fin de partie
-
+// un compteur de tour
 
 // ************************************* PSEUDO CODE *********************************//
 

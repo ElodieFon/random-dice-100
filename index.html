@@ -9,8 +9,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="gamebord" id="gamebord">
-        
+    <div class="gameboard" id="gameboard">
+        <div class="d-flex justify-content-evenly ">   
+            <div class="playeur d-flex flex-column justify-content-evenly align-items-center" id="playeur1" >
+                <h2>joueur 1</h2>
+                <label for="score">score</label>
+                <span name="score" class="score" id="playeurScore">0</span>
+                <label for="current">nombre de tour</label>
+                <span id="currentPlayeur" name="current" class="current">0</span>
+            </div>
+            <div class="d-flex flex-column justify-content-evenly align-items-center"> 
+                <div id="dice" class="dice"><img src="" alt="dé"></div>
+                <button class="rollDice btn">Lancer le dé</button>
+                <button class="envoyer btn">Envoyer points</button>        
+            </div>
+            <div class="playeur d-flex flex-column justify-content-evenly align-items-center" id="playeur2" >
+                <h2>Joueur2</h2>
+                <label for="score">score</label>
+                <span name="score" class="score" id="playeurScore">0</span>
+                <label for="current">nombre de tour</label>
+                <span id="currentPlayeur" name="current" class="current">0</span>
+            </div>
+        </div> 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

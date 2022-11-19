@@ -6,22 +6,25 @@ let playeur1 = document.getElementById('playeur1');
 let playeur2 = document.getElementById('playeur2') ;
 // un dés 
 let dice = document.getElementById('dice') ;
-console.log(dice);
 // un compteur de point
 let counterPtsPlayeur = 0; 
+let ptsPlayeur1 = document.getElementById('playeur1Score')
+let ptsPlayeur2 = document.getElementById('playeur2Score')
 // un compteur de tour
 let counterRound = 0 ;
-let resultat = 0 ;
+let NbrRoundPlayeur1 = document.getElementById('currentPlayeur1')
+let NbrRoundPlayeur2 = document.getElementById('currentPlayeur2')
 // Un dés comporte 6 faces allant de 1 à 6
 let diceFaces = ["dice-1","dice-2","dice-3","dice-4","dice-5","dice-6"];
 let diceFace;
+let resultat = 0 ;
+
 
 // Pour commencer on lance une nouvelle partie 
 function gameStart(){
 
 }
 
-// Chaque joueurs à un compteur de points 
 // Le compteur de point ne peu pas dépasser 100 ou etre inferieur à 0
 
 // le joueur clique sur un bouton pour lancer le dés
@@ -40,9 +43,8 @@ document.getElementById('rollDice').addEventListener("click",function(){
         // sinon son nombre de tour repasse à 0 
         counterRound = 0;
     }
-    console.log("résultat du dé "+ resultat);
-    console.log("tour " + counterRound);
-    console.log(diceFace);
+    // Afficher le nombre de tour en html
+    NbrRoundPlayeur1.innerHTML = ` <span> ${counterRound} </span> ` 
 })
 //function pour changer l'image du dés
 function changeFaceDice(diceFace){

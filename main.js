@@ -8,6 +8,7 @@ let playeur2 = document.getElementById('playeur2') ;
 let dice = document.getElementById('dice') ;
 // un compteur de point
 let counterPtsPlayeur = 0; 
+let resultatenvoyer = 0 ;
 let ptsPlayeur1 = document.getElementById('playeur1Score')
 let ptsPlayeur2 = document.getElementById('playeur2Score')
 // un compteur de tour
@@ -25,8 +26,7 @@ function gameStart(){
 
 }
 
-// Le compteur de point ne peu pas dépasser 100 ou etre inferieur à 0
-
+// alert("fin de partie")
 // le joueur clique sur un bouton pour lancer le dés
 document.getElementById('rollDice').addEventListener("click",function(){
     // le dés renvois un nombre de point aléatoir compris entre 1 et 6
@@ -45,6 +45,24 @@ document.getElementById('rollDice').addEventListener("click",function(){
     }
     // Afficher le nombre de tour en html
     NbrRoundPlayeur1.innerHTML = ` <span> ${counterRound} </span> ` 
+
+    
+    //le joueur clique sur un bouton pour envoyer les points a sont compteur
+    document.getElementById('sendPoints').addEventListener("click",function(){
+       
+    // le resultat envoyer prend la valeur du resultat du dée plus la valeur des points déjà enregister
+    
+    resultatenvoyer = resultat + counterPtsPlayeur;
+    // afficher le resultat en html 
+    playeur1Score.innerHTML = `<span>${resultatenvoyer}</span>` ;  
+      
+    });
+    // conserver la valeur du précédent envoi 
+    counterPtsPlayeur = resultatenvoyer ;
+    // Le compteur de point ne peu pas dépasser 100 ou etre inferieur à 0
+    if (counterPtsPlayeur > 100){
+        alert("fin de partie")
+    }
 })
 //function pour changer l'image du dés
 function changeFaceDice(diceFace){

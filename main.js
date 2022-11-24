@@ -4,6 +4,7 @@ let gameBoard = document.getElementById('gameboard');
 // deux joueurs 
 let playeur1 = document.getElementById('playeur1');
 let playeur2 = document.getElementById('playeur2');
+
 // un dés 
 let dice = document.getElementById('dice');
 // Un dés comporte 6 faces allant de 1 à 6
@@ -57,14 +58,15 @@ function gameStart(){
         //remetre le compteur a 0 une fois envoyer
         counterRound = 0;
         // afficher le resultat en html 
-        playeur1Score.innerHTML = `<span>${resultatEnvoyer}</span>` ;        
+        playeur1Score.innerHTML = `<span>${resultatEnvoyer}</span>` ; 
+             
     });
-    
     // Le compteur de point ne peu pas dépasser 100 
-    if (counterPtsPlayeur >= 100){ 
-        //si il depasse lancer la fin de partie
-        endGame() 
-    }
+        if (counterPtsPlayeur >= 100){ 
+        counterPtsPlayeur = resultatEnvoyer;  
+        //lancer la fin de partie
+        endGame()    
+    }       
 }
 
 

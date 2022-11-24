@@ -13,28 +13,28 @@
 <body>
     <h1 class="text-center p-4">Random Dice 100</h1>
     <div class="gameboard d-flex align-items-center justify-content-center flex-wrap m-4" id="gameboard">
-        <button class="d-flex align-items-center justify-content-center m-auto">Nouvelle partie</button>
+        <button class="d-flex align-items-center justify-content-center m-auto" id="resetGame">Nouvelle partie</button>
         <div class="container-flex d-flex justify-content-evenly container-fluid flex-wrap col-12">   
             <div class="playeur d-flex flex-column justify-content-evenly align-items-center" id="playeur1" >
                 <h2>Joueur 1</h2>
                 <p class="fs-5">Score</p>
-                <span class="score" id="playeur1Score">0</span>
+                <span class="score fs-1 text-danger" id="playeur1Score">0</span>
                 <p class="fs-5">Nombre de tour</p>
-                <span id="currentPlayeur1" class="current">0</span>
+                <span id="currentPlayeur1" class="current fs-1 text-danger">0</span>
             </div>
             <div class="d-flex flex-column justify-content-evenly align-items-center"> 
-                <div id="dice" class="dice">
-                    
-                </div>
+
+                <div id="dice" class="dice"></div>
+
                 <button class="rollDice" id="rollDice">Lancer le dé</button>
                 <button class="envoyer" id="sendPoints">Envoyer points</button>        
             </div>
             <div class="playeur d-flex flex-column justify-content-evenly align-items-center" id="playeur2" >
                 <h2>Joueur2</h2>
                 <p class="fs-5">Score</p>
-                <span class="score" id="playeur2Score">0</span>
+                <span class="score fs-1 text-danger" id="playeur2Score">0</span>
                 <p class="fs-5">Nombre de tour</p>
-                <span id="currentPlayeur2" class="current">0</span>
+                <span id="currentPlayeur2" class="current fs-1 text-danger">0</span>
             </div>
         </div> 
     </div>

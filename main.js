@@ -14,7 +14,7 @@ let resultat = 0 ;
 let rollDice =document.getElementById('rollDice');
 // un compteur de point
 let counterPtsPlayeur = 0; 
-let resultatenvoyer = 0 ;
+let resultatEnvoyer = 0 ;
 let ptsPlayeur1 = document.getElementById('playeur1Score');
 let ptsPlayeur2 = document.getElementById('playeur2Score');
 // un bouton pour envoyer ses points
@@ -40,11 +40,11 @@ function gameStart(){
     // compter le nombre de tour
     if(resultat != 1){
         // tant que le joueur ne tombe pas sur 1 
-        // sont nombre de tour augment 
-        counterRound ++ ;
+        // sont nombre de tour augment a chaque click et rajoute le resultat du dés
+        counterRound += resultat ;
     }
     else{
-        // sinon son nombre de tour repasse à 0 
+        // sinon il tombe sur 1 son nombre de tour repasse à 0 
         counterRound = 0;
     }
     // Afficher le nombre de tour en html
@@ -53,12 +53,12 @@ function gameStart(){
     //le joueur clique sur un bouton pour envoyer les points a sont compteur
     sendPoints.addEventListener("click",function(){    
         // le resultat envoyer prend la valeur du resultat du dée plus la valeur des points déjà enregister   
-        resultatenvoyer = resultat + counterPtsPlayeur;
+        resultatEnvoyer += counterRound ;
+        //remetre le compteur a 0 une fois envoyer
+        counterRound = 0;
         // afficher le resultat en html 
-        playeur1Score.innerHTML = `<span>${resultatenvoyer}</span>` ;        
+        playeur1Score.innerHTML = `<span>${resultatEnvoyer}</span>` ;        
     });
-    // conserver la valeur du précédent envoi 
-    counterPtsPlayeur = resultatenvoyer ;
     
     // Le compteur de point ne peu pas dépasser 100 
     if (counterPtsPlayeur >= 100){ 
@@ -80,7 +80,7 @@ function endGame() {
 }
  
 
-
+// Todo : trouver une fonction pour savoir à qui est le tour 
 
 // tant que :
 // si le joueur dont c'est le tour ne tombe pas sur 1 ou n'envoi pas c'est points au compteur :
@@ -90,10 +90,4 @@ function endGame() {
 // sinon il tombe sur 1 c'est au tour de son adversaire
 // fin tant que
 
-// Todo : trouver une fonction pour savoir à qui est le tour 
-
-// quand le joueur arrive à 100 points le joueur a gagné
-//fin de partie
-//les compteurs sont remis a 0
-
-// on peu relancer une partie
+//TODO : fonction pour relancer une partie

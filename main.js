@@ -12,14 +12,18 @@ let rollDice =document.getElementById('rollDice');
 // un compteur de point
 let resultatEnvoyer = 0 ;
 let ptsPlayeur1 = document.getElementById('playeur1Score');
+ptsPlayeur1.textContent = 0;
 let ptsPlayeur2 = document.getElementById('playeur2Score');
+ptsPlayeur2.textContent = 0;
 let ptsPlayeur;
 // un bouton pour envoyer ses points
 let sendPoints = document.getElementById('sendPoints');
 // un compteur de tour
 let counterRound = 0 ;
 let NbrRoundPlayeur1 = document.getElementById('currentPlayeur1');
+NbrRoundPlayeur1.textContent = 0 ;
 let NbrRoundPlayeur2 = document.getElementById('currentPlayeur2');
+NbrRoundPlayeur2.textContent = 0 ;
 let NbrRoundPlayeur;
 // un bouton reset
 let resetGame = document.getElementById('resetGame');
@@ -32,6 +36,7 @@ rollDice.addEventListener("click",function(){
     gameStart(); 
     changeFaceDice();
     sendPointsClick();  
+    // Le compteur de point ne peu pas dépasser 100 
     if (resultatEnvoyer >= 100){endGame();}
         
 })
@@ -44,7 +49,7 @@ function gameStart(){
            // si c'est le compteur du jour 2 qui tourne
         if (NbrRoundPlayeur == NbrRoundPlayeur2){          
             // les point qu'il envera seront atribuer a sont propre compter 
-            ptsPlayeur = ptsPlayeur2 ; 
+            ptsPlayeur = ptsPlayeur2; 
             // sont nombre de tour augmentera a chaque click et rajoute le resultat du dés      
             counterRound += resultat ;   
         }
@@ -56,47 +61,48 @@ function gameStart(){
             // sont nombre de tour augmentera a chaque click et rajoute le resultat du dés  
             counterRound += resultat ;   
         }
-        //afficher le compteur    
+        
     }
     else if (resultat == 1){           
-        // le conteur passe a 0 
-        counterRound = 0 ;
+       
         // si c'était le compteur du jour 2 qui tourner
         if(NbrRoundPlayeur == NbrRoundPlayeur2) { 
             // on passe au compter du joueur 1 
-            NbrRoundPlayeur = NbrRoundPlayeur1 ;  
+            NbrRoundPlayeur = NbrRoundPlayeur1 ;
+            // sont counterRound passe a 0
+            counterRound = 0  ;   
         }
-        else {
+        else if (NbrRoundPlayeur == NbrRoundPlayeur1){
             // sinon on passe au joueur 2
-            NbrRoundPlayeur = NbrRoundPlayeur2 ;  
+            NbrRoundPlayeur = NbrRoundPlayeur2 ; 
+            // sont counterRound passe a 0
+            counterRound = 0  ;
         }
-    }    
+
+    }     
    NbrRoundPlayeur.textContent = counterRound ;
 }
 function sendPointsClick(){ 
     
 //le joueur clique sur un bouton pour envoyer les points a sont compteur
     sendPoints.addEventListener("click",function(){ 
-      
-       
+
         // le resultat envoyer prend la valeur du resultat du dée plus la valeur des points déjà enregister     
-        if(NbrRoundPlayeur == NbrRoundPlayeur2){
+        if((NbrRoundPlayeur == NbrRoundPlayeur2)  && (resultat > 1)){
             NbrRoundPlayeur = NbrRoundPlayeur1;  
             resultatEnvoyer += counterRound ;
+            resultatEnvoyer = resultatEnvoyer;
+ 
         }
-        else{
+        else if ((NbrRoundPlayeur == NbrRoundPlayeur1)  && (resultat > 1)){
             NbrRoundPlayeur = NbrRoundPlayeur2;  
             resultatEnvoyer += counterRound ;
+  
         }  
-        // afficher le resultat en html 
-        ptsPlayeur.textContent = resultatEnvoyer; 
-      
-        // repasse le counterRound a 0 
-         counterRound = 0 ;         
+        counterRound = 0;
+        ptsPlayeur.textContent = resultatEnvoyer ;       
     });  
 }
-
-// Le compteur de point ne peu pas dépasser 100 
 
 //fonction pour changer l'image du dés en fonction du resultat 
 function changeFaceDice(diceFace){
@@ -111,6 +117,7 @@ function resetGameClick(){
     //TODO : fonction pour relancer une partie
     resultat = 0 ;
     counterRound = 0;
+    NbrRoundPlayeur = NbrRoundPlayeur1
     NbrRoundPlayeur1.textContent = counterRound ;
     NbrRoundPlayeur2.textContent = counterRound ;
     resultatEnvoyer = 0;

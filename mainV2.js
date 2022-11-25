@@ -41,9 +41,6 @@ resetGameButton.addEventListener('click', function(){
     resetGame();
 })
 
-
-
-
 // =================================================================================================
 console.log(resultatDice);
 //définir quand commence le jeux 
@@ -146,19 +143,19 @@ function playeurActifSwitch(){
 //definir comment reset le jeux
 function resetGame(){
 // on remet tout a 0
-currentsPlayeur1 =0;
-currentsPlayeur2 = 0 ;
-scoresPlayeur1 = 0;
-scoresPlayeur2 = 0 ;
-playeur1.classList.add('playeur_actif');
-playeur1Title.classList.add('playeur_title_actif');   
-playeur2.classList.remove('playeur_actif'); 
-playeur2Title.classList.remove('playeur_title_actif');    
-// on rafraichi l'affichage
-currentPlayeur1.textContent = currentsPlayeur1 ;
-currentPlayeur2.textContent = currentsPlayeur2 ;
-scorePlayeur1.textContent = scoresPlayeur1 ;
-scorePlayeur2.textContent = scoresPlayeur2 ;
+    currentsPlayeur1 =0;
+    currentsPlayeur2 = 0 ;
+    scoresPlayeur1 = 0;
+    scoresPlayeur2 = 0 ;
+    playeur1.classList.add('playeur_actif');
+    playeur1Title.classList.add('playeur_title_actif');   
+    playeur2.classList.remove('playeur_actif'); 
+    playeur2Title.classList.remove('playeur_title_actif');    
+    // on rafraichi l'affichage
+    currentPlayeur1.textContent = currentsPlayeur1 ;
+    currentPlayeur2.textContent = currentsPlayeur2 ;
+    scorePlayeur1.textContent = scoresPlayeur1 ;
+    scorePlayeur2.textContent = scoresPlayeur2 ;
 }
 //indiquer une fin de partie
 

@@ -43,8 +43,8 @@ body * {
 
     transition: 0.3s;
   }
-.gameboard button i {
-    color: red;
+.gameboard button img{
+    max-width: 30px;
     margin: 0.5rem;
 }
 .gameboard button:hover {

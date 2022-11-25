@@ -54,8 +54,9 @@ body * {
     color: black;
 }
 .playeur_title_actif::after {
-    content: " \01F4CD";
+    content: "\2022";
     padding: 1rem;
+    color: red;
 }
 .control {
     background-color: rgb(237, 237, 237);

@@ -1,19 +1,41 @@
+body {
+     background-image: url(images/background.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+body * {
+    margin: 0;
+    padding: 0;
+   
+ }
 .imageDé{
     width: 80px;
+    margin: 2rem;   
+}
+.playeur {
+    background-color: white;
+    color: rgb(117, 117, 117);
+    padding: 2rem;
 }
 .playeur_actif {
-    background-color: rgb(237, 237, 237);
+    background-color: rgb(243, 243, 243);
 }
 
 .gameboard {
     font-family: Lato;
+    width: 80vw; 
+    min-height: 80vh;  
 }
 .gameboard button{
     border: none;
     background: none;
     display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
+    align-items: center;  
     text-transform: uppercase;
     color: #555;
     font-size: 20px; 
@@ -28,11 +50,18 @@
 .gameboard button:hover {
     transform: scale(1.1);
 }
+.playeur_title_actif{
+    color: black;
+}
 .playeur_title_actif::after {
     content: " \01F4CD";
     padding: 1rem;
 }
-@media screen and (max-width : 800px){
+
+@media screen and (max-width : 900px){
+.control {
+    background-color: rgb(237, 237, 237);
+}
     .column-reverse{
     flex-direction: column-reverse;
   }
@@ -44,10 +73,12 @@
     .control{
     padding: 1rem;
     position: absolute;
-    min-height: 500px;
+    height: 70vh;
+    
+  
     }
     .playeur{
-      padding: 2rem;
       width: 50%;
+      height: 80vh;
     }
 }

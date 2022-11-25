@@ -13,28 +13,28 @@
 <body>
     <h1 class="text-center p-4">Random Dice 100</h1>
     <div class="gameboard d-flex align-items-center justify-content-center flex-wrap m-4" id="gameboard">
-        <button class="d-flex align-items-center justify-content-center m-auto" id="resetGame">Nouvelle partie</button>
+        <button class="d-flex align-items-center justify-content-center m-auto mb-3" id="resetGame"><i class="ion-ios-plus-outline"></i>Nouvelle partie</button>
         <div class="container-flex d-flex justify-content-evenly container-fluid flex-wrap col-12">   
             <div class="playeur playeur_actif  d-flex flex-column justify-content-evenly align-items-center" id="playeur1" >
-                <h2>Joueur 1</h2>
+                <p id="playeurTitle1" class=" playeur_title_actif fs-2 ">Joueur 1<p>
                 <p class="fs-5">Score</p>
-                <span class="score fs-1 text-danger" id="playeur1Score"></span>
+                <span class="score fs-1 text-danger " id="playeur1Score"></span>
                 <p class="fs-5">Nombre de tour</p>
-                <span id="playeur1Current" class="current fs-1 text-danger"></span>
+                <span id="playeur1Current" class="current fs-1 text-danger "></span>
             </div>
-            <div class="d-flex flex-column justify-content-evenly align-items-center"> 
+            <div class="control d-flex flex-column justify-content-evenly align-items-center"> 
 
                 <div id="dice" class="dice"></div>
 
-                <button class="rollDice" id="rollDice">Lancer le dé</button>
-                <button class="envoyer" id="sendPoints">Envoyer points</button>        
+                <button class="rollDice" id="rollDice"><i class="ion-ios-loop"></i>Lancer le dé</button>
+                <button class="envoyer" id="sendPoints"><i class="ion-ios-download-outline"></i>Envoyer points</button>        
             </div>
             <div class="playeur d-flex flex-column justify-content-evenly align-items-center" id="playeur2" >
-                <h2>Joueur2</h2>
+                <p id="playeurTitle2" class="fs-2 ">Joueur 2</h2>
                 <p class="fs-5">Score</p>
-                <span class="score fs-1 text-danger" id="playeur2Score"></span>
+                <span class="score fs-1 text-danger " id="playeur2Score"></span>
                 <p class="fs-5">Nombre de tour</p>
-                <span id="playeur2Current" class="current fs-1 text-danger"></span>
+                <span id="playeur2Current" class="current fs-1 text-danger "></span>
             </div>
         </div> 
     </div>

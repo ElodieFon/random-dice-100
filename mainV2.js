@@ -4,7 +4,9 @@
 let gameBoard = document.getElementById('gameboard');
 // deux joueurs 
 let playeur1 = document.getElementById('playeur1');
+let playeur1Title = document.getElementById('playeurTitle1');
 let playeur2 = document.getElementById('playeur2');
+let playeur2Title = document.getElementById('playeurTitle2');
 //un compteur de point pour chaque joueur avec un affichage
 let scorePlayeur1 = document.getElementById('playeur1Score');
 let scoresPlayeur1 = 0 ;
@@ -38,6 +40,9 @@ let resetGameButton = document.getElementById('resetGame');
 resetGameButton.addEventListener('click', function(){
     resetGame();
 })
+
+
+
 
 // =================================================================================================
 console.log(resultatDice);
@@ -127,11 +132,15 @@ sendPoints.addEventListener("click" ,  function(){
 function playeurActifSwitch(){
  if(playeur1.classList.contains('playeur_actif')){
         playeur1.classList.remove('playeur_actif');
-        playeur2.classList.add('playeur_actif');   
+        playeur1Title.classList.remove('playeur_title_actif');   
+        playeur2.classList.add('playeur_actif'); 
+        playeur2Title.classList.add('playeur_title_actif');  
     }
     else {
         playeur1.classList.add('playeur_actif');
-        playeur2.classList.remove('playeur_actif');        
+        playeur1Title.classList.add('playeur_title_actif');   
+        playeur2.classList.remove('playeur_actif'); 
+        playeur2Title.classList.remove('playeur_title_actif');      
     }
 }
 //definir comment reset le jeux
@@ -142,7 +151,9 @@ currentsPlayeur2 = 0 ;
 scoresPlayeur1 = 0;
 scoresPlayeur2 = 0 ;
 playeur1.classList.add('playeur_actif');
+playeur1Title.classList.add('playeur_title_actif');   
 playeur2.classList.remove('playeur_actif'); 
+playeur2Title.classList.remove('playeur_title_actif');    
 // on rafraichi l'affichage
 currentPlayeur1.textContent = currentsPlayeur1 ;
 currentPlayeur2.textContent = currentsPlayeur2 ;
@@ -150,7 +161,14 @@ scorePlayeur1.textContent = scoresPlayeur1 ;
 scorePlayeur2.textContent = scoresPlayeur2 ;
 }
 //indiquer une fin de partie
+
 function endGame(){
-    alert("fin de partie")
+    //TODO : Faire une annimation et suprimer l'alerte
+    if(playeur1.classList.contains('playeur_actif')) {
+        alert("fin de partie , vainqueur joueur 1 !");
+    }
+    else {
+        alert("fin de partie , vainqueur joueur 2 !");
+    }
     resetGame();
 }

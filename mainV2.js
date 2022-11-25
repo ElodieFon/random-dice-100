@@ -35,6 +35,9 @@ let diceFace;
 let resultatDice;
 // un message de fin de partie
 let messageEndGame ;
+// renversement d'affichage pour les petit écran 
+containerReverse = gameBoard.querySelector('.container-flex');
+
 // un bouton pour réinitialiser le jeu
 let resetGameButton = document.getElementById('resetGame');
 resetGameButton.addEventListener('click', function(){
@@ -131,13 +134,19 @@ function playeurActifSwitch(){
         playeur1.classList.remove('playeur_actif');
         playeur1Title.classList.remove('playeur_title_actif');   
         playeur2.classList.add('playeur_actif'); 
-        playeur2Title.classList.add('playeur_title_actif');  
+        playeur2Title.classList.add('playeur_title_actif'); 
+         //pour les petit écran inverser les playeur a l'afffichage
+        containerReverse.classList.add('column-reverse');
+        containerReverse.classList.remove('column-reverse-reverse');  
     }
     else {
         playeur1.classList.add('playeur_actif');
         playeur1Title.classList.add('playeur_title_actif');   
         playeur2.classList.remove('playeur_actif'); 
-        playeur2Title.classList.remove('playeur_title_actif');      
+        playeur2Title.classList.remove('playeur_title_actif'); 
+        //pour les petit écran les playeur a l'afffichage
+        containerReverse.classList.remove('column-reverse');
+        containerReverse.classList.add('column-reverse-reverse');    
     }
 }
 //definir comment reset le jeux
@@ -169,3 +178,5 @@ function endGame(){
     }
     resetGame();
 }
+
+

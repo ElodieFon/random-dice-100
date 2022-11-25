@@ -32,7 +32,14 @@
   content: " \01F4CD";
   padding: 1rem;
 }
-
+@media screen and (max-width : 800px){
+  .column-reverse{
+    flex-direction: column-reverse;
+  }
+  .column-reverse-reverse {
+    flex-direction: column;
+  }
+}
 @media screen and (min-width : 900px){
   .control{
     padding: 1rem;
@@ -43,4 +50,5 @@
       padding: 2rem;
       width: 50%;
     }
+ 
 }

@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="text-center p-4">Random Dice 100</h1>
-    <div class="gameboard d-flex align-items-center justify-content-center flex-wrap m-4" id="gameboard">
+    <div class="gameboard m-4" id="gameboard">
         <button class="d-flex align-items-center justify-content-center m-auto mb-3" id="resetGame"><i class="ion-ios-plus-outline"></i>Nouvelle partie</button>
-        <div class="container-flex d-flex justify-content-evenly container-fluid flex-wrap col-12">   
+        <div class="container-flex d-flex justify-content-evenly  flex-wrap container-fluid col-12">   
             <div class="playeur playeur_actif  d-flex flex-column justify-content-evenly align-items-center" id="playeur1" >
                 <p id="playeurTitle1" class=" playeur_title_actif fs-2 ">Joueur 1<p>
                 <p class="fs-5">Score</p>
@@ -22,9 +21,9 @@
                 <p class="fs-5">Nombre de tour</p>
                 <span id="playeur1Current" class="current fs-1 text-danger "></span>
             </div>
-            <div class="control d-flex flex-column justify-content-evenly align-items-center"> 
+            <div class="control d-flex flex-column justify-content-evenly align-items-center m-4"> 
 
-                <div id="dice" class="dice"></div>
+                <div id="dice" class="dice"><img src="images/dice-1.png" alt="dice-1" class="imageDé"></div> 
 
                 <button class="rollDice" id="rollDice"><i class="ion-ios-loop"></i>Lancer le dé</button>
                 <button class="envoyer" id="sendPoints"><i class="ion-ios-download-outline"></i>Envoyer points</button>        

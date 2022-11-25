@@ -15,12 +15,12 @@
     <div class="gameboard d-flex align-items-center justify-content-center flex-wrap m-4" id="gameboard">
         <button class="d-flex align-items-center justify-content-center m-auto" id="resetGame">Nouvelle partie</button>
         <div class="container-flex d-flex justify-content-evenly container-fluid flex-wrap col-12">   
-            <div class="playeur d-flex flex-column justify-content-evenly align-items-center" id="playeur1" >
+            <div class="playeur playeur_actif  d-flex flex-column justify-content-evenly align-items-center" id="playeur1" >
                 <h2>Joueur 1</h2>
                 <p class="fs-5">Score</p>
                 <span class="score fs-1 text-danger" id="playeur1Score"></span>
                 <p class="fs-5">Nombre de tour</p>
-                <span id="currentPlayeur1" class="current fs-1 text-danger"></span>
+                <span id="playeur1Current" class="current fs-1 text-danger"></span>
             </div>
             <div class="d-flex flex-column justify-content-evenly align-items-center"> 
 
@@ -34,11 +34,12 @@
                 <p class="fs-5">Score</p>
                 <span class="score fs-1 text-danger" id="playeur2Score"></span>
                 <p class="fs-5">Nombre de tour</p>
-                <span id="currentPlayeur2" class="current fs-1 text-danger"></span>
+                <span id="playeur2Current" class="current fs-1 text-danger"></span>
             </div>
         </div> 
     </div>
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <script src="mainV2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

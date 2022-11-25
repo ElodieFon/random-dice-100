@@ -1,3 +1,10 @@
 .imageDé{
   width: 50px;
 }
+.playeur_actif {
+  background-color: rgb(237, 237, 237);
+}
+.playeur{
+  padding: 2rem;
+  flex: 1;
+}

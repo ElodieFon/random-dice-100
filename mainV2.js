@@ -130,7 +130,7 @@ sendPoints.addEventListener("click" ,  function(){
 });
 // indiquer le passage au joueur suivant
 function playeurActifSwitch(){
- if(playeur1.classList.contains('playeur_actif')){
+    if(playeur1.classList.contains('playeur_actif')){
         playeur1.classList.remove('playeur_actif');
         playeur1Title.classList.remove('playeur_title_actif');   
         playeur2.classList.add('playeur_actif'); 
@@ -159,7 +159,9 @@ function resetGame(){
     playeur1.classList.add('playeur_actif');
     playeur1Title.classList.add('playeur_title_actif');   
     playeur2.classList.remove('playeur_actif'); 
-    playeur2Title.classList.remove('playeur_title_actif');    
+    playeur2Title.classList.remove('playeur_title_actif'); 
+    containerReverse.classList.remove('column-reverse');
+    containerReverse.classList.add('column-reverse-reverse');      
     // on rafraichi l'affichage
     currentPlayeur1.textContent = currentsPlayeur1 ;
     currentPlayeur2.textContent = currentsPlayeur2 ;

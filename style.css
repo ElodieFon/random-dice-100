@@ -1,39 +1,39 @@
 .imageDé{
-  width: 80px;
+    width: 80px;
 }
 .playeur_actif {
-  background-color: rgb(237, 237, 237);
+    background-color: rgb(237, 237, 237);
 }
 
 .gameboard {
-  font-family: Lato;
+    font-family: Lato;
 }
 .gameboard button{
-  border: none;
-  background: none;
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  color: #555;
-  font-size: 20px; 
-  font-weight: 300; 
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #555;
+    font-size: 20px; 
+    font-weight: 300; 
 
-  transition: 0.3s;
-}
+    transition: 0.3s;
+  }
 .gameboard button i {
-  color: red;
-  margin: 0.5rem;
+    color: red;
+    margin: 0.5rem;
 }
 .gameboard button:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 .playeur_title_actif::after {
-  content: " \01F4CD";
-  padding: 1rem;
+    content: " \01F4CD";
+    padding: 1rem;
 }
 @media screen and (max-width : 800px){
-  .column-reverse{
+    .column-reverse{
     flex-direction: column-reverse;
   }
   .column-reverse-reverse {
@@ -41,7 +41,7 @@
   }
 }
 @media screen and (min-width : 900px){
-  .control{
+    .control{
     padding: 1rem;
     position: absolute;
     min-height: 500px;
@@ -50,5 +50,4 @@
       padding: 2rem;
       width: 50%;
     }
- 
 }

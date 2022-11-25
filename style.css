@@ -10,8 +10,7 @@ body {
 }
 body * {
     margin: 0;
-    padding: 0;
-   
+    padding: 0;  
  }
 .imageDé{
     width: 80px;
@@ -21,6 +20,7 @@ body * {
     background-color: white;
     color: rgb(117, 117, 117);
     padding: 2rem;
+    width: 100vw;
 }
 .playeur_actif {
     background-color: rgb(243, 243, 243);
@@ -57,8 +57,10 @@ body * {
     content: " \01F4CD";
     padding: 1rem;
 }
-
-@media screen and (max-width : 900px){
+.control {
+    background-color: rgb(237, 237, 237);
+}
+@media screen and (max-width : 800px){
 .control {
     background-color: rgb(237, 237, 237);
 }
@@ -74,11 +76,12 @@ body * {
     padding: 1rem;
     position: absolute;
     height: 70vh;
-    
-  
     }
     .playeur{
       width: 50%;
       height: 80vh;
+    }
+    .control {
+        background-color: transparent;
     }
 }

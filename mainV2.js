@@ -4,21 +4,21 @@
 let gameBoard = document.getElementById('gameboard');
 // deux joueurs 
 let playeur1 = document.getElementById('playeur1');
-let playeur1Title = document.getElementById('playeurTitle1');
+let playeur1Title = playeur1.querySelector('#playeurTitle1');
 let playeur2 = document.getElementById('playeur2');
-let playeur2Title = document.getElementById('playeurTitle2');
+let playeur2Title = playeur2.querySelector('#playeurTitle2');
 //un compteur de point pour chaque joueur avec un affichage
-let scorePlayeur1 = document.getElementById('playeur1Score');
+let scorePlayeur1 = playeur1.querySelector('#playeur1Score');
 let scoresPlayeur1 = 0 ;
 scorePlayeur1.textContent = scoresPlayeur1 ;
-let scorePlayeur2 = document.getElementById('playeur2Score');
+let scorePlayeur2 = playeur2.querySelector('#playeur2Score');
 let scoresPlayeur2 = 0 ;
 scorePlayeur2.textContent = scoresPlayeur2 ;
 // un compteur de tour pour chaque joueur avec un affichage
-let currentPlayeur1 = document.getElementById('playeur1Current');
+let currentPlayeur1 = playeur1.querySelector('#playeur1Current');
 let currentsPlayeur1 = 0;
 currentPlayeur1.textContent = currentsPlayeur1 ;
-let currentPlayeur2 = document.getElementById('playeur2Current');
+let currentPlayeur2 = playeur2.querySelector('#playeur2Current');
 let currentsPlayeur2 = 0 ;
 currentPlayeur2.textContent = currentsPlayeur2 ;
 //un moyen d'envoyer le score (avec un bouton)

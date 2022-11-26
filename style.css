@@ -1,56 +1,58 @@
 body {
-     background-image: url(images/background.jpg);
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
-     min-height: 100vh;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: lato;
 }
 body * {
     margin: 0;
     padding: 0;  
- }
-.imageDé{
-    width: 80px;
-    margin: 2rem;   
 }
-.playeur {
-    background-color: white;
-    color: rgb(117, 117, 117);
-    padding: 2rem;
-    width: 100vw;
+h1 {
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+    font-weight: 600;
 }
-.playeur_actif {
-    background-color: rgb(243, 243, 243);
-}
-
-.gameboard {
-    font-family: Lato;
-    width: 80vw; 
-    min-height: 80vh;  
-}
-.gameboard button{
-    border: none;
-    background: none;
+.gameBoard {
+    min-height: 80vh;
     display: flex;
-    align-items: center;  
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+.imageDé {
+    width: 80px;  
+}
+.control {
+    background-color: rgba(255, 255, 255, 0.511);
+    padding: 0.5rem;
+}
+button {
+    background: none;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
     text-transform: uppercase;
-    color: #555;
-    font-size: 20px; 
-    font-weight: 300; 
-
-    transition: 0.3s;
-  }
-.gameboard button img{
-    max-width: 30px;
+}
+button img {
+    width: 25px;
     margin: 0.5rem;
 }
-.gameboard button:hover {
-    transform: scale(1.1);
+.player {   
+
+    background-color: white;
+    padding: 1rem;
+    color: rgb(192, 192, 192);
 }
-.playeur_title_actif{
+.playeur_actif {
+    background-color: rgb(217, 217, 217);
+}
+
+.playeur_title_actif {
     color: black;
 }
 .playeur_title_actif::after {
@@ -58,31 +60,38 @@ body * {
     padding: 1rem;
     color: red;
 }
-.control {
-    background-color: rgb(237, 237, 237);
-}
-@media screen and (max-width : 800px){
-.control {
-    background-color: rgb(237, 237, 237);
-}
-    .column-reverse{
-    flex-direction: column-reverse;
-  }
-  .column-reverse-reverse {
-    flex-direction: column;
-  }
-}
-@media screen and (min-width : 900px){
+/* ====================================================== */
+@media screen and (min-width : 700px) {
+    
     .control{
-    padding: 1rem;
-    position: absolute;
-    height: 70vh;
-    }
-    .playeur{
-      width: 50%;
-      height: 80vh;
-    }
-    .control {
+        position: absolute;
         background-color: transparent;
+        width: fit-content;
+        height: 80vh;
+        align-content: space-between;    
+    }
+    .player{
+      flex: 1; 
+      flex-direction: column;
+      height: 80vh;
+      padding-top: 5vh; 
+    }
+    .control button {
+        border: none;
+        flex-direction: row;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+    }
+    .current {
+        width: fit-content;
+        margin: auto;
+        margin-bottom: 5vh;
+    }
+    
+    button:hover{
+     transform: scale(1.1); 
     }
 }

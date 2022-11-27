@@ -48,6 +48,7 @@ button img {
     padding: 1rem;
     color: rgb(192, 192, 192);
 }
+
 .playeur_actif {
     background-color: rgb(217, 217, 217);
 }
@@ -59,7 +60,15 @@ button img {
     content: "\2022";
     padding: 1rem;
     color: red;
+  
 }
+.current {
+    width: fit-content;
+    margin: auto;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
 /* ====================================================== */
 @media screen and (min-width : 700px) {
     
@@ -89,6 +98,7 @@ button img {
         width: fit-content;
         margin: auto;
         margin-bottom: 5vh;
+        font-size: 20px;
     }
     
     button:hover{

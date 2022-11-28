@@ -11,7 +11,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="text-center mt-3">RollDice Game 100</h1> 
+    <h1 class="text-center mt-3 mb-3">RollDice Game 100</h1> 
+    <div class="d-flex align-items-center justify-content-center">
+        <ul class="p-4 m-2"> 
+            <li>The game has <strong>2 players</strong>, playing in rounds.</li>
+            <li>In each turn, a player rolls a dice as many times as he whishes. Each result get added to his <strong>ROUND score</strong>.</li>
+            <li> 
+                BUT, if the player <strong> rolls a 1</strong>, all his ROUND <strong>score gets lost</strong>. 
+                After that, it's the <strong>next player's turn</strong>.
+            </li>
+            <li>
+                The <strong>player can choose to 'Hold'</strong>, which means that his <strong>ROUND score gets added to his GLBAL score</strong>. 
+                After that, it's the <strong>next player's turn</strong>.
+            </li>
+            <li>The first player to <strong>reach 100 points</strong> on GLOBAL score <strong>wins the game</strong>.</li>
+        </ul>
+    </div>
     <div class="gameBoard p-3 " id="gameBoard">
         <div class="col-12 d-flex flex-wrap  justify-content-center">  
              
